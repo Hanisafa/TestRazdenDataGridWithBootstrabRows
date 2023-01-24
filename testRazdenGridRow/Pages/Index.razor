@@ -1,0 +1,99 @@
+﻿@page "/"
+@using Radzen.Blazor
+@using Radzen;
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<div class="row">
+    <div class="col-6">
+        <RadzenDataGrid TItem="SubscriptionClient"
+                        Data="@Clients"
+                        ColumnWidth="300px"
+                        AllowFiltering="true"
+                        FilterMode="FilterMode.Simple"
+                        AllowSorting="true">
+            <Columns>
+                <RadzenDataGridColumn TItem="SubscriptionClient" Property="@nameof(SubscriptionClient.Name)" Title="Name" />
+                <RadzenDataGridColumn TItem="SubscriptionClient" Property="@nameof(SubscriptionClient.Domain)" Title="Domain" />
+                <RadzenDataGridColumn TItem="SubscriptionClient" Property="@nameof(SubscriptionClient.Dummy_1)" Title="Dummy_1" />
+                <RadzenDataGridColumn TItem="SubscriptionClient" Property="@nameof(SubscriptionClient.Dummy_2)" Title="Dummy_2" />
+                <RadzenDataGridColumn TItem="SubscriptionClient" Property="@nameof(SubscriptionClient.Dummy_3)" Title="Dummy_3" />
+                <RadzenDataGridColumn TItem="SubscriptionClient" Property="@nameof(SubscriptionClient.Dummy_4)" Title="Dummy_4" />
+                <RadzenDataGridColumn TItem="SubscriptionClient" Property="@nameof(SubscriptionClient.Dummy_5)" Title="Dummy_5" />
+                <RadzenDataGridColumn TItem="SubscriptionClient" Property="@nameof(SubscriptionClient.Dummy_6)" Title="Dummy_6" />
+
+            </Columns>
+        </RadzenDataGrid>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-4">
+        <button class="btn btn-primary">b1</button>
+    </div>
+    <div class="col-4">
+        <button class="btn btn-primary">b1</button>
+    </div>
+    <div class="col-4">
+        <button class="btn btn-primary">b1</button>
+    </div>
+</div>
+
+
+@code {
+
+    public class SubscriptionClient
+    {
+        public int Id { get; set; }
+
+
+        public string Name { get; set; }
+
+        public string Domain { get; set; }
+        public string Dummy_1 { get; set; }
+        public string Dummy_2 { get; set; }
+        public string Dummy_3 { get; set; }
+        public string Dummy_4 { get; set; }
+        public string Dummy_5 { get; set; }
+
+        public string Dummy_6 { get; set; }
+
+    }
+
+
+    public IEnumerable<SubscriptionClient> Clients { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Clients = new List<SubscriptionClient>()
+        {
+            new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+            new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+             new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+            new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+             new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+            new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+             new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+            new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+             new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+            new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+             new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+            new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+             new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+            new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+             new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+            new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+             new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+            new SubscriptionClient(){Name = "Hani"  , Domain="Hani" , Dummy_1 = "d1" , Dummy_2="d2" , Dummy_3 ="d3" , Dummy_4="4" , Dummy_5="5" , Dummy_6="6"},
+        };
+    }
+}
